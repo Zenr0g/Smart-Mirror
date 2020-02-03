@@ -30,7 +30,7 @@ def weatherdataMain(root):
         try:
             _ = requests.get(url, timeout=timeout)
             degree_sign = u'\N{DEGREE SIGN}'
-            owm = pyowm.OWM('182bd4f8d4bd352d1f6017301e857e6c') # API key
+            owm = pyowm.OWM('...') # Your API key
             observation = owm.weather_at_place('Mumbai, IN') # Location
             weather = observation.get_weather()
             temperature_data = int(weather.get_temperature('celsius')['temp'])
